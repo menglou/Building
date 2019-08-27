@@ -1,0 +1,13 @@
+E:\自己做 的开发项目\BuildingDemo\BuildingDemo\bin\Debug\BuildingDemo.exe.config
+E:\自己做 的开发项目\BuildingDemo\BuildingDemo\bin\Debug\BuildingDemo.exe
+E:\自己做 的开发项目\BuildingDemo\BuildingDemo\bin\Debug\BuildingDemo.pdb
+E:\自己做 的开发项目\BuildingDemo\BuildingDemo\bin\Debug\Common.dll
+E:\自己做 的开发项目\BuildingDemo\BuildingDemo\bin\Debug\Model.dll
+E:\自己做 的开发项目\BuildingDemo\BuildingDemo\bin\Debug\Common.pdb
+E:\自己做 的开发项目\BuildingDemo\BuildingDemo\bin\Debug\Model.pdb
+E:\自己做 的开发项目\BuildingDemo\BuildingDemo\obj\Debug\BuildingDemo.csprojResolveAssemblyReference.cache
+E:\自己做 的开发项目\BuildingDemo\BuildingDemo\obj\Debug\BuildingDemo.Form1.resources
+E:\自己做 的开发项目\BuildingDemo\BuildingDemo\obj\Debug\BuildingDemo.Properties.Resources.resources
+E:\自己做 的开发项目\BuildingDemo\BuildingDemo\obj\Debug\BuildingDemo.csproj.GenerateResource.Cache
+E:\自己做 的开发项目\BuildingDemo\BuildingDemo\obj\Debug\BuildingDemo.exe
+E:\自己做 的开发项目\BuildingDemo\BuildingDemo\obj\Debug\BuildingDemo.pdb

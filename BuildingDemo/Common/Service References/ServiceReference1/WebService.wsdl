@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="weburl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="weburl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="weburl">
+      <s:element name="GetAllBuildingData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientUUID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllBuildingDataResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Calc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="formula" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetBuildingData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientUUID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBuildingDataResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientUUID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPasswordResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUUID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUUIDResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientUUID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SendHeartBeat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientUUID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendHeartBeatResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SendMeterData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientUUID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMeterDataResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAllBuildingDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllBuildingData" />
+  </wsdl:message>
+  <wsdl:message name="GetAllBuildingDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllBuildingDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalcSoapIn">
+    <wsdl:part name="parameters" element="tns:Calc" />
+  </wsdl:message>
+  <wsdl:message name="CalcSoapOut">
+    <wsdl:part name="parameters" element="tns:CalcResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBuildingDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBuildingData" />
+  </wsdl:message>
+  <wsdl:message name="GetBuildingDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBuildingDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPassword" />
+  </wsdl:message>
+  <wsdl:message name="GetPasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUUIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUUID" />
+  </wsdl:message>
+  <wsdl:message name="GetUUIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUUIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendHeartBeatSoapIn">
+    <wsdl:part name="parameters" element="tns:SendHeartBeat" />
+  </wsdl:message>
+  <wsdl:message name="SendHeartBeatSoapOut">
+    <wsdl:part name="parameters" element="tns:SendHeartBeatResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendMeterDataSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMeterData" />
+  </wsdl:message>
+  <wsdl:message name="SendMeterDataSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMeterDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllBuildingDataHttpGetIn">
+    <wsdl:part name="clientName" type="s:string" />
+    <wsdl:part name="clientCode" type="s:string" />
+    <wsdl:part name="clientUUID" type="s:string" />
+    <wsdl:part name="clientPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllBuildingDataHttpGetOut" />
+  <wsdl:message name="CalcHttpGetIn">
+    <wsdl:part name="formula" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CalcHttpGetOut" />
+  <wsdl:message name="GetBuildingDataHttpGetIn">
+    <wsdl:part name="clientName" type="s:string" />
+    <wsdl:part name="clientCode" type="s:string" />
+    <wsdl:part name="clientUUID" type="s:string" />
+    <wsdl:part name="clientPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBuildingDataHttpGetOut" />
+  <wsdl:message name="GetPasswordHttpGetIn">
+    <wsdl:part name="clientName" type="s:string" />
+    <wsdl:part name="clientCode" type="s:string" />
+    <wsdl:part name="clientUUID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPasswordHttpGetOut" />
+  <wsdl:message name="GetUUIDHttpGetIn">
+    <wsdl:part name="clientName" type="s:string" />
+    <wsdl:part name="clientCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUUIDHttpGetOut" />
+  <wsdl:message name="HelloWorldHttpGetIn" />
+  <wsdl:message name="HelloWorldHttpGetOut" />
+  <wsdl:message name="LoginHttpGetIn">
+    <wsdl:part name="clientName" type="s:string" />
+    <wsdl:part name="clientCode" type="s:string" />
+    <wsdl:part name="clientUUID" type="s:string" />
+    <wsdl:part name="clientPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpGetOut" />
+  <wsdl:message name="SendHeartBeatHttpGetIn">
+    <wsdl:part name="clientName" type="s:string" />
+    <wsdl:part name="clientCode" type="s:string" />
+    <wsdl:part name="clientUUID" type="s:string" />
+    <wsdl:part name="clientPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendHeartBeatHttpGetOut" />
+  <wsdl:message name="SendMeterDataHttpGetIn">
+    <wsdl:part name="clientName" type="s:string" />
+    <wsdl:part name="clientCode" type="s:string" />
+    <wsdl:part name="clientUUID" type="s:string" />
+    <wsdl:part name="clientPassword" type="s:string" />
+    <wsdl:part name="data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendMeterDataHttpGetOut" />
+  <wsdl:message name="GetAllBuildingDataHttpPostIn">
+    <wsdl:part name="clientName" type="s:string" />
+    <wsdl:part name="clientCode" type="s:string" />
+    <wsdl:part name="clientUUID" type="s:string" />
+    <wsdl:part name="clientPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllBuildingDataHttpPostOut" />
+  <wsdl:message name="CalcHttpPostIn">
+    <wsdl:part name="formula" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CalcHttpPostOut" />
+  <wsdl:message name="GetBuildingDataHttpPostIn">
+    <wsdl:part name="clientName" type="s:string" />
+    <wsdl:part name="clientCode" type="s:string" />
+    <wsdl:part name="clientUUID" type="s:string" />
+    <wsdl:part name="clientPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBuildingDataHttpPostOut" />
+  <wsdl:message name="GetPasswordHttpPostIn">
+    <wsdl:part name="clientName" type="s:string" />
+    <wsdl:part name="clientCode" type="s:string" />
+    <wsdl:part name="clientUUID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPasswordHttpPostOut" />
+  <wsdl:message name="GetUUIDHttpPostIn">
+    <wsdl:part name="clientName" type="s:string" />
+    <wsdl:part name="clientCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUUIDHttpPostOut" />
+  <wsdl:message name="HelloWorldHttpPostIn" />
+  <wsdl:message name="HelloWorldHttpPostOut" />
+  <wsdl:message name="LoginHttpPostIn">
+    <wsdl:part name="clientName" type="s:string" />
+    <wsdl:part name="clientCode" type="s:string" />
+    <wsdl:part name="clientUUID" type="s:string" />
+    <wsdl:part name="clientPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpPostOut" />
+  <wsdl:message name="SendHeartBeatHttpPostIn">
+    <wsdl:part name="clientName" type="s:string" />
+    <wsdl:part name="clientCode" type="s:string" />
+    <wsdl:part name="clientUUID" type="s:string" />
+    <wsdl:part name="clientPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendHeartBeatHttpPostOut" />
+  <wsdl:message name="SendMeterDataHttpPostIn">
+    <wsdl:part name="clientName" type="s:string" />
+    <wsdl:part name="clientCode" type="s:string" />
+    <wsdl:part name="clientUUID" type="s:string" />
+    <wsdl:part name="clientPassword" type="s:string" />
+    <wsdl:part name="data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendMeterDataHttpPostOut" />
+  <wsdl:portType name="WebServiceSoap">
+    <wsdl:operation name="GetAllBuildingData">
+      <wsdl:input message="tns:GetAllBuildingDataSoapIn" />
+      <wsdl:output message="tns:GetAllBuildingDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Calc">
+      <wsdl:input message="tns:CalcSoapIn" />
+      <wsdl:output message="tns:CalcSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingData">
+      <wsdl:input message="tns:GetBuildingDataSoapIn" />
+      <wsdl:output message="tns:GetBuildingDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPassword">
+      <wsdl:input message="tns:GetPasswordSoapIn" />
+      <wsdl:output message="tns:GetPasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUUID">
+      <wsdl:input message="tns:GetUUIDSoapIn" />
+      <wsdl:output message="tns:GetUUIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendHeartBeat">
+      <wsdl:input message="tns:SendHeartBeatSoapIn" />
+      <wsdl:output message="tns:SendHeartBeatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMeterData">
+      <wsdl:input message="tns:SendMeterDataSoapIn" />
+      <wsdl:output message="tns:SendMeterDataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebServiceHttpGet">
+    <wsdl:operation name="GetAllBuildingData">
+      <wsdl:input message="tns:GetAllBuildingDataHttpGetIn" />
+      <wsdl:output message="tns:GetAllBuildingDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Calc">
+      <wsdl:input message="tns:CalcHttpGetIn" />
+      <wsdl:output message="tns:CalcHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingData">
+      <wsdl:input message="tns:GetBuildingDataHttpGetIn" />
+      <wsdl:output message="tns:GetBuildingDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPassword">
+      <wsdl:input message="tns:GetPasswordHttpGetIn" />
+      <wsdl:output message="tns:GetPasswordHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUUID">
+      <wsdl:input message="tns:GetUUIDHttpGetIn" />
+      <wsdl:output message="tns:GetUUIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpGetIn" />
+      <wsdl:output message="tns:HelloWorldHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginHttpGetIn" />
+      <wsdl:output message="tns:LoginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendHeartBeat">
+      <wsdl:input message="tns:SendHeartBeatHttpGetIn" />
+      <wsdl:output message="tns:SendHeartBeatHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMeterData">
+      <wsdl:input message="tns:SendMeterDataHttpGetIn" />
+      <wsdl:output message="tns:SendMeterDataHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebServiceHttpPost">
+    <wsdl:operation name="GetAllBuildingData">
+      <wsdl:input message="tns:GetAllBuildingDataHttpPostIn" />
+      <wsdl:output message="tns:GetAllBuildingDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Calc">
+      <wsdl:input message="tns:CalcHttpPostIn" />
+      <wsdl:output message="tns:CalcHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingData">
+      <wsdl:input message="tns:GetBuildingDataHttpPostIn" />
+      <wsdl:output message="tns:GetBuildingDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPassword">
+      <wsdl:input message="tns:GetPasswordHttpPostIn" />
+      <wsdl:output message="tns:GetPasswordHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUUID">
+      <wsdl:input message="tns:GetUUIDHttpPostIn" />
+      <wsdl:output message="tns:GetUUIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpPostIn" />
+      <wsdl:output message="tns:HelloWorldHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginHttpPostIn" />
+      <wsdl:output message="tns:LoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendHeartBeat">
+      <wsdl:input message="tns:SendHeartBeatHttpPostIn" />
+      <wsdl:output message="tns:SendHeartBeatHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMeterData">
+      <wsdl:input message="tns:SendMeterDataHttpPostIn" />
+      <wsdl:output message="tns:SendMeterDataHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSoap" type="tns:WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllBuildingData">
+      <soap:operation soapAction="weburl/GetAllBuildingData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Calc">
+      <soap:operation soapAction="weburl/Calc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingData">
+      <soap:operation soapAction="weburl/GetBuildingData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPassword">
+      <soap:operation soapAction="weburl/GetPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUUID">
+      <soap:operation soapAction="weburl/GetUUID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="weburl/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="weburl/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendHeartBeat">
+      <soap:operation soapAction="weburl/SendHeartBeat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMeterData">
+      <soap:operation soapAction="weburl/SendMeterData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceSoap12" type="tns:WebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllBuildingData">
+      <soap12:operation soapAction="weburl/GetAllBuildingData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Calc">
+      <soap12:operation soapAction="weburl/Calc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingData">
+      <soap12:operation soapAction="weburl/GetBuildingData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPassword">
+      <soap12:operation soapAction="weburl/GetPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUUID">
+      <soap12:operation soapAction="weburl/GetUUID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="weburl/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="weburl/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendHeartBeat">
+      <soap12:operation soapAction="weburl/SendHeartBeat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMeterData">
+      <soap12:operation soapAction="weburl/SendMeterData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceHttpGet" type="tns:WebServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetAllBuildingData">
+      <http:operation location="/GetAllBuildingData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Calc">
+      <http:operation location="/Calc" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingData">
+      <http:operation location="/GetBuildingData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetPassword">
+      <http:operation location="/GetPassword" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetUUID">
+      <http:operation location="/GetUUID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <http:operation location="/Login" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="SendHeartBeat">
+      <http:operation location="/SendHeartBeat" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="SendMeterData">
+      <http:operation location="/SendMeterData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceHttpPost" type="tns:WebServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetAllBuildingData">
+      <http:operation location="/GetAllBuildingData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Calc">
+      <http:operation location="/Calc" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingData">
+      <http:operation location="/GetBuildingData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetPassword">
+      <http:operation location="/GetPassword" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetUUID">
+      <http:operation location="/GetUUID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <http:operation location="/Login" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="SendHeartBeat">
+      <http:operation location="/SendHeartBeat" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="SendMeterData">
+      <http:operation location="/SendMeterData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService">
+    <wsdl:port name="WebServiceSoap" binding="tns:WebServiceSoap">
+      <soap:address location="http://115.238.132.41:8091/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceSoap12" binding="tns:WebServiceSoap12">
+      <soap12:address location="http://115.238.132.41:8091/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceHttpGet" binding="tns:WebServiceHttpGet">
+      <http:address location="http://115.238.132.41:8091/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceHttpPost" binding="tns:WebServiceHttpPost">
+      <http:address location="http://115.238.132.41:8091/WebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
